@@ -1,5 +1,5 @@
 {
-  "name": "study.jasmine",
+  "name": "jasmine-sample",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -10,9 +10,11 @@
   "license": "ISC",
   "devDependencies": {
     "jasmine-core": "^2.5.2",
+    "jquery": "^3.2.1",
     "karma": "^1.5.0",
     "karma-chrome-launcher": "^2.0.0",
     "karma-jasmine": "^1.1.0",
-    "karma-jasmine-ajax": "^0.1.13"
+    "karma-jasmine-ajax": "^0.1.13",
+    "karma-jasmine-jquery": "^0.1.1"
   }
 }

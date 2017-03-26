@@ -40,4 +40,20 @@ describe('Hello모듈의', ()=> {
       expect(callbackSpy).toHaveBeenCalledWith(response.responseText);
     });
   });
+  describe('print 함수는', ()=> {
+    let el;
+    beforeEach(()=> {
+      el = $('<h1></h1>');
+      $('body').append(el);
+    })
+    afterEach(()=>el.remove());
+    it('돔엘레맨트와 제이쿼리 파리매터가 없으면 에러를 반환한다', ()=> {
+      expect(()=>Hello.print()).toThrowError();
+    });
+    it('파라매터로 받은 돔에 인삿말을 출력한다', ()=> {
+      Hello.print(el, jQuery);
+      const expectText = Hello.greeting();
+      expect(el).toHaveText(expectText);
+    });
+  })
 });

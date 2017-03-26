@@ -9,10 +9,11 @@ module.exports = function(config) {
 
     // frameworks to use
     // available frameworks: https://npmjs.org/browse/keyword/karma-adapter
-    frameworks: ['jasmine-ajax', 'jasmine'],
+    frameworks: ['jasmine-ajax', 'jasmine-jquery', 'jasmine'],
 
     // list of files / patterns to load in the browser
     files: [
+      './node_modules/jquery/dist/jquery.js',
       './src/hello.js',
       './test/hello.spec.js'
     ],

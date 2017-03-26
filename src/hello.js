@@ -18,5 +18,14 @@ var Hello = {
     req.send(null);
 
     return this.name || 'world';
+  },
+  print(el, jQuery) {
+    if (!jQuery) {
+      throw new Error('제이쿼리 라이브러리가 필요합니다');
+    }
+    if (!el instanceof jQuery) {
+      throw new Error('파라매터는 제이쿼리 객체이어야 합니다');
+    }
+    el.text(this.greeting());
   }
 };
